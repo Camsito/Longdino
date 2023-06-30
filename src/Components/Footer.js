@@ -1,18 +1,12 @@
 export function Footer() {
+  /* eslint-disable */
   return (
     <footer>
       <div class="container top-footer">
-        {/* <div class="flex-center">
-          <i class="fa fa-github fa-4x icon-3d"></i>
-          <i class="fa fa-gitlab fa-4x icon-3d"></i>
-          <i class="fa fa-bitbucket fa-4x icon-3d"></i>
-          <i class="fa fa-git fa-4x icon-3d"></i>
-        </div> */}
         <div class="flex-center">
-          <i class="fa fa-twitter fa-4x icon-3d"></i>
-          <i class="fa fa-facebook fa-4x icon-3d"></i>
-          <i class="fa fa-instagram fa-4x icon-3d"></i>
-          <i class="fa fa-whatsapp fa-4x icon-3d"></i>
+          <a class="fa fa-facebook fa-4x icon-3d" href="https://web.facebook.com/profile.php?id=100094334372935" target="_blank" rel="noreferrer"></a>
+          <a class="fa fa-instagram fa-4x icon-3d" href="https://www.instagram.com/dinotechno/" target="_blank" rel="noreferrer"></a>
+          <a class="fa fa-whatsapp fa-4x icon-3d" href="https://api.whatsapp.com/send?phone=+56936681029&text=Hola, Quisiera hacer unas consultas." target="_blank" rel="noreferrer"></a>
         </div>
       </div>
       <div class="container end-footer">

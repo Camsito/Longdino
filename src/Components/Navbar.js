@@ -1,16 +1,13 @@
 import React from "react";
-import { Router } from "react-router-dom";
 
 function Navbar(){
     return(
         <header>
-            <div className="company-logo">LONGDINO</div>
+            <div className="company-logo">LongDino</div>
             <nav className="navbar">
             <ul className="nav-items">
-                <Router>
-                    <li className="nav-item"><a href="www.google.com" className="nav-link">HOME</a></li>
-                    <li className="nav-item"><a href="www.google.com" className="nav-link">CONTACT</a></li>
-                </Router>
+                <li className="nav-item"><a href="www.google.com" className="nav-link">HOME</a></li>
+                <li className="nav-item"><a href="https://api.whatsapp.com/send?phone=+56936681029&text=Hola, Quisiera hacer unas consultas."  target="_blank" rel="noreferrer" className="nav-link">CONTACT</a></li>
             </ul>
             </nav>
             <div className="menu-toggle">
