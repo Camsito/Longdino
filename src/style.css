@@ -47,7 +47,7 @@ img {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  background-color: #000;
+  background-color: #000 ;
 }
 
 /* ================= HEADER ================ */
@@ -120,8 +120,13 @@ header {
 
 /* -------- HOME SECTION -------------- */
 .section-1 {
-  background-color: #000;
+  backdrop-filter: blur(5px);
+  width: 900px;
+  height: 300px;
   display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  padding: 10rem 5rem 0 5rem;
 }
 /* .home-computer-container {} */
 
@@ -138,6 +143,8 @@ header {
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 600;
+  max-width: 30rem;
+  letter-spacing: 0.12rem;
 }
 .slogan .company-slogan {
   background: -webkit-linear-gradient(
@@ -151,6 +158,7 @@ header {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.8rem;
+  max-width: 20rem;
 }
 
 /* -------- OFFER SECTION ------------- */
@@ -158,17 +166,44 @@ header {
   margin: 2rem 0;
 }
 .offer {
-  background: #000;
+  background: transparent;
   display: grid;
-}
-
-.offer2 {
-  background: #000;
-  display: grid;
+  height: 20%;
+  margin: 5rem 0;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 200px;
+  grid-template-rows: auto auto;
 }
 .offer img {
   background-color: transparent;
 }
+.offer-1 {
+  grid-template-areas: "offer-1-img offer-desc-1";
+}
+.offer-1 img {
+  background-color: transparent;
+  padding: 2rem 0;
+}
+
+.offer2 {
+  background: transparent;
+  display: grid;
+  margin-left: 97px;
+}
+
+.offer-desc-2 {
+  grid-area: offer-desc-2;
+}
+
+.offer-2 {
+  grid-template-areas: "offer-desc-2 offer-2-img";
+}
+
+.offer-2-img{
+  grid-area: offer-2-img;
+}
+
 .offer-1 img {
   background-color: var(--dark-color);
   padding: 3rem 0;
@@ -176,7 +211,12 @@ header {
 .offer-description {
   background-color: transparent;
   padding: 0 1rem;
+  
+  font-size: 1.9rem;
 }
+.offer-description .offer-hook {
+    max-width: 30rem;
+  }
 .offer-description .offer-title {
   background: -webkit-linear-gradient(
     120deg,
@@ -190,6 +230,7 @@ header {
   font-size: 1.8rem;
   font-weight: 400;
   padding: 1.5rem 0 0.5rem 0;
+  
 }
 .offer-description .offer-hook {
   background: -webkit-linear-gradient(
@@ -265,7 +306,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--third-color);
+  background-color: var(#000);
 }
 .copyright {
   color: var(--white-color-alt);
@@ -286,164 +327,6 @@ header {
 }
 
 /* =============== Responsive ======= */
-
-@media (max-width: 767px) {
-  /* Estilos para pantallas móviles */
-  header {
-    padding: 10px;
-  }
-  
-  main{
-    padding:10px;
-  }
-  section{
-    width: px;
-  }
-}
-@media (min-width: 769px) {
-  header {
-    padding: 1rem 5rem;
-  }
-  /* ================= MAIN ================ */
-
-  /* -------- HOME SECTION -------------- */
-  .section-1 {
-    justify-content: space-between;
-    grid-template-columns: 1fr 1fr;
-    padding: 10rem 5rem 0 5rem;
-  }
-  .slogan .company-title {
-    max-width: 30rem;
-    font-size: 1.8rem;
-    letter-spacing: 0.12rem;
-  }
-  .slogan .company-slogan {
-    max-width: 20rem;
-    font-size: 1.3rem;
-  }
-  /* -------- OFFER SECTION ------------- */
-  .section-2 {
-    margin: 2rem 5rem;
-  }
-  .offer {
-    margin: 5rem 0;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 200px;
-    grid-template-rows: auto auto;
-  }
-  .offer-1 {
-    grid-template-areas: "offer-1-img offer-desc-1";
-  }
-  .offer-1 img {
-    background-color: transparent;
-    padding: 2rem 0;
-  }
-  .offer-2 {
-    grid-template-areas: "offer-desc-2 offer-2-img";
-  }
-  .offer-1-img {
-  }
-  .offer-2-img {
-    grid-area: offer-2-img;
-  }
-  .offer-desc-1 {
-    grid-area: offer-desc-1;
-  }
-  .offer-desc-2 {
-    grid-area: offer-desc-2;
-  }
-  .offer-description .offer-title {
-    font-size: 1.9rem;
-    padding: 1.5rem 0 0.5rem 0;
-  }
-  .offer-description .offer-hook {
-    max-width: 30rem;
-  }
-  .offer-description {
-    background-color: transparent;
-    padding: 2rem 1rem;
-  }
-  .offer-description .offer-title {
-    padding: 0.5rem 0 1rem 0;
-  }
-  .offer-description .cart-btn {
-    margin: 2rem 0 0.5rem 0;
-  }
-  /* -------- PRODUCT SECTION ----------- */
-  .section-3 {
-    gap: 5rem;
-  }
-  .product::before {
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 300ms;
-  }
-  .product:hover::before {
-    transform: scaleY(1);
-    transform-origin: top;
-    transition: transform 300ms;
-  }
-  .product_add_cart {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-  .product:hover .product_add_cart {
-    transform: translate(-50%, -50%) scaleY(1);
-    transform-origin: top;
-  }
-  /* -------- SPONSOR SECTION ----------- */
-  .section-4 {
-    margin: 5rem 0;
-  }
-  /* ========= SUBSCRIBE SECTION ========== */
-  .section-5 {
-    padding: 1rem 0;
-  }
-  .section-5 .subscribe-container {
-    display: flex;
-    align-items: center;
-  }
-  input[type="text"] {
-    padding: 0 1rem;
-    width: 15rem;
-  }
-  input[type="submit"] {
-    width: 10rem;
-  }
-  /* =============== FOOTER =============== */
-  .top-footer {
-    justify-content: space-around;
-    height: 250px;
-  }
-  .footer-title {
-    font-size: 1rem;
-    padding: 0rem 0;
-  }
-  .footer-items h3 {
-    font-size: 0.9rem;
-  }
-
-  .end-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-  }
-  .copyright {
-    color: hsla(0, 0%, 98%, 0.747);
-    padding: 1rem 0;
-    font-size: 0.8rem;
-  }
-  .copyright b {
-    font-size: 0.7rem;
-  }
-  .designer {
-    color: hsla(0, 0%, 98%, 0.322);
-    font-size: 0.8rem;
-  }
-}
 
 
 /* Footer nuevo */
@@ -503,5 +386,110 @@ header {
   100% {
     text-shadow: -5px 0 var(--redColor), 5px -4px var(--blueColor);
   }
+}
+
+
+
+
+/* Responsive */
+
+
+@media (max-width: 767px){
+        header {
+                padding: 10px;
+        }
+        
+        main {
+                padding: 10px;
+        }
+        
+        .section-1 {
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+        }
+        .section-2 {
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+        }
+        .slogan .company-title {
+                font-size: 1.5rem;
+        }
+        
+        .slogan .company-slogan {
+                font-size: 1.2rem;
+        }
+        
+        .section-2 {
+                margin: 2rem 0;
+        }
+        
+        .offer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 2rem 0;
+        }
+        .offer2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 2rem 0;
+        }
+        
+        .offer img {
+        width: 100%;
+        height: auto;
+        }
+        
+        
+        .offer-description {
+        text-align: center;
+        padding: 0;
+        }
+        
+        .offer-description .offer-title {
+        font-size: 1.8rem;
+        }
+        
+        .offer-description .offer-hook {
+        font-size: 1.2rem;
+        }
+        
+        .offer-description .cart-btn {
+        margin: 2rem 0 1rem 0;
+        }
+        
+        .top-footer {
+        height: auto;
+        }
+        
+        .footer-title {
+        font-size: 1.2rem;
+        }
+        
+        .footer-items h3 {
+        font-size: 1.1rem;
+        }
+        
+        .end-footer {
+        height: auto;
+        }
+        
+        .designer {
+        padding-bottom: 1rem;
+        }
+        
 }
 
