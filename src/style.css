@@ -367,7 +367,7 @@ header {
 .icon-3d:hover{
   
   -webkit-animation: icon3d 200ms infinite;
-  animation: icon3d 200ms infinite;
+  animation: icon3d 250ms infinite;
 }
 
 @keyframes icon3d {
