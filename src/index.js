@@ -9,6 +9,7 @@ import Wsp from './Components/WhatsappPNG';
 //-------------StyleSheet-------------//
 import "./style.css";
 import "./wsp.css";
+import "./Botons.css"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
