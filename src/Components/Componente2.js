@@ -3,7 +3,7 @@ import React from 'react';
 import { Placa } from '../assets/Placa';
 import { ServicioTec } from '../assets/Tecnic-service';
 import { Gabinete } from '../assets/Gabinete';
-import {Manten} from '../assets/Manten'
+import {Manten} from '../assets/Manten';
 //--------  Funciones --------//
 function Comp2(){
     return(
