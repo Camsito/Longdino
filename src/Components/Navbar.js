@@ -1,9 +1,14 @@
 import React from "react";
-
+// import {LogoHeader} from "../assets/Logo_Header";
 function Navbar(){
+    /* eslint-disable */
     return(
+        <>
         <header>
-            <div className="company-logo">LongDino</div>
+            <div className="company-logo" >
+                
+                LongDino
+            </div>
             <nav className="navbar">
             <ul className="nav-items">
                 <li className="nav-item"><a href="www.google.com" className="nav-link">HOME</a></li>
@@ -15,6 +20,8 @@ function Navbar(){
             <i className="bx bx-x"></i>
             </div>
         </header>
+        <div className="linetop"></div>
+        </>
     );
 }
 
