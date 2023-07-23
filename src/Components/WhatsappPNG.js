@@ -1,4 +1,3 @@
-import "../wsp.css"
 
 function Wsp() {
   return(
