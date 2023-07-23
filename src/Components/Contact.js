@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "../styleForm.css";
+
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,7 +28,6 @@ const ContactForm = () => {
   };
 
   const validateEmail = (email) => {
-    // Expresión regular para validar el formato del correo
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
@@ -34,40 +35,43 @@ const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Validar el correo antes de enviar el formulario
     const isFormValid = validateEmail(email);
 
     if (isFormValid) {
-      // Aquí puedes realizar alguna acción con los datos del formulario, como enviarlos a un servidor, por ejemplo.
-      console.log("Datos del formulario válidos:", {
+      const formData = {
         name,
         email,
         subject,
         message,
-      });
+      };
 
-      // Limpiar el formulario después de enviar los datos
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      // Enviar la solicitud POST al servidor para guardar los datos en MySQL
+      axios
+        .post("http://localhost:5000/api/contact", formData)
+        .then((response) => {
+          console.log(response.data);
+          alert("Formulario enviado correctamente");
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        })
+        .catch((error) => {
+          console.error("Error al enviar el formulario:", error);
+          alert("Ocurrió un error al enviar el formulario.");
+        });
     } else {
       console.log("Por favor, ingresa un correo válido.");
     }
   };
 
   return (
-    <div class="contenido">
+    <div className="contenido">
       <div>
         <h1>Formulario de Contacto</h1>
       </div>
-      <form
-        class="formulario"
-        name="formulario"
-        value={name}
-        onChange={handleNameChange}
-        onSubmit={handleSubmit}
-      >
+      <form className="formulario" name="formulario" onSubmit={handleSubmit}>
+        {/* Resto del código del formulario */}
         <div class="contacto">
           <label for="nombre">Nombre: </label>
           <input type="text" placeholder="Jhon" required />
