@@ -5,11 +5,19 @@ body{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    background: url(../src/assets/Logo.svg) no-repeat fixed center;
+    /* background: url(../src/assets/Logo.svg) no-repeat fixed center; */
     color: #FFF;
     background-color: #000;
 }
 
+
+.contact-container {
+    /* Estilos específicos para el formulario de contacto */
+    background-image: url('assets/logo2.svg');
+    background-repeat: no-repeat; 
+    background-position: center;
+    /* Agrega otros estilos necesarios */
+  }
 .contenido{
     margin: 5% 10% 5% 10%;
     background-color: rgba(0, 0, 0, 0.726);
@@ -27,6 +35,8 @@ input[type=text], input[type=email], input[type=tel], select, textarea {
   border-radius: 10px;
   margin-top: 3px;
   margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color:#eee;
 }
 button[type=submit] {
   background-color: rgb(60, 136, 62);

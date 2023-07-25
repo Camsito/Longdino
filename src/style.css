@@ -34,7 +34,7 @@ a {
 img {
   width: auto;
   height: auto;
-  animation: blur-in 0.8s linear both
+  /* animation: blur-in 0.8s linear both */
 }
 
 
@@ -70,6 +70,7 @@ body {
   text-align: center;
   position: absolute;
   top: 68px;
+  animation: blur-in 0.8s linear both;
 }
 
 .line {
@@ -106,6 +107,7 @@ header {
   justify-content: space-between;
   background-color: var(--dark-color);
   padding: 1rem 2rem;
+  animation: blur-in 0.8s linear both;
 }
 
 .company-logo {
@@ -116,6 +118,7 @@ header {
       #fa5894);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "Raleway", sans-serif;
 }
 
 .nav-items {
@@ -195,6 +198,8 @@ header {
   font-weight: 600;
   max-width: 30rem;
   letter-spacing: 0.12rem;
+  text-align: left;
+  padding-left: 0;
 }
 
 .slogan .company-slogan {
@@ -473,6 +478,16 @@ header {
   }
 }
 
+
+.fade-in-image {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
 /* Nuevo wsp */
 
 .wt {
@@ -499,8 +514,6 @@ header {
   bottom: -15px;
   opacity: 0;
 }
-
-
 
 .wt:hover .popup {
   display: block;
@@ -730,3 +743,6 @@ header {
   }
 
 }
+
+
+

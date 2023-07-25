@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styleForm.css";
 
-const ContactForm = () => {
+const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -65,7 +65,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contenido">
+    <div className="contact-container">
+    <div className="contenido" >
       <div>
         <h1>Formulario de Contacto</h1>
       </div>
@@ -121,7 +122,8 @@ const ContactForm = () => {
         </div>
       </form>
     </div>
+    </div>
   );
 };
 
-export default ContactForm;
+export default Contact;

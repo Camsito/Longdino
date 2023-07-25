@@ -1,28 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-//-------------Componentes-------------//
-import Navbar from './Components/Navbar';
-import Comp1 from './Components/Componente1';
-import Comp2 from './Components/Componente2';
-import { Footer } from './Components/Footer';
-import Copyri from './Components/Copyri';
-import Greeting from './Components/WhatsappPNG';
-//-------------StyleSheet-------------//
-import "./style.css";
-import "./Botons.css";
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <>
-    <Navbar/>
-    <Comp1/>
-    <Comp2/>
-    <Footer/>
-    <Copyri/>
-    <Greeting/>
-  </>
-
-);
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "../src/Components/Navbar";
+import Home from "../src/Components/Home";
+import Contact from "../src/Components/Contact";
 
 
+const App = () => {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/contact" Component={Contact} />
+      </Routes>
+    </Router>
+  );
+};
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
