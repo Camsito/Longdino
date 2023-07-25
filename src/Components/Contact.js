@@ -46,8 +46,7 @@ const ContactForm = () => {
       };
 
       // Enviar la solicitud POST al servidor para guardar los datos en MySQL
-      axios
-        .post("http://localhost:5000/api/contact", formData)
+      axios.post("/api/contact", formData)
         .then((response) => {
           console.log(response.data);
           alert("Formulario enviado correctamente");
@@ -71,16 +70,21 @@ const ContactForm = () => {
         <h1>Formulario de Contacto</h1>
       </div>
       <form className="formulario" name="formulario" onSubmit={handleSubmit}>
-        {/* Resto del código del formulario */}
-        <div class="contacto">
-          <label for="nombre">Nombre: </label>
-          <input type="text" placeholder="Jhon" required />
-          <label for="apellido">Apellido: </label>
+        <div className="contacto">
+          <label htmlFor="nombre">Nombre: </label>
+          <input
+            type="text"
+            placeholder="Jhon"
+            required
+            value={name}
+            onChange={handleNameChange}
+          />
+          <label htmlFor="apellido">Apellido: </label>
           <input type="text" placeholder="Wick" required />
 
-          <label for="tel">Telefono: </label>
+          <label htmlFor="tel">Telefono: </label>
           <input type="tel" required />
-          <label for="mail">Mail: </label>
+          <label htmlFor="mail">Mail: </label>
           <input
             type="email"
             value={email}
@@ -91,26 +95,26 @@ const ContactForm = () => {
             <p style={{ color: "red" }}>Por favor, ingresa un correo válido.</p>
           )}
         </div>
-        <div class="work">
+        <div className="work">
           <h2>Asunto</h2>
           <textarea
             type="text"
-            maxlength="300"
+            maxLength="300"
             value={subject}
             onChange={handleSubjectChange}
           ></textarea>
         </div>
-        <div class="descripcion">
+        <div className="descripcion">
           <h2>Mensaje: </h2>
           <textarea
             type="text"
-            maxlength="300"
+            maxLength="300"
             value={message}
             onChange={handleMessageChange}
             placeholder="Cuentanos de que se trata..."
           ></textarea>
         </div>
-        <div class="botones">
+        <div className="botones">
           <button type="submit" form="formulario" value="Submit">
             Enviar
           </button>

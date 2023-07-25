@@ -34,7 +34,9 @@ a {
 img {
   width: auto;
   height: auto;
+  animation: blur-in 2.0s linear both
 }
+
 
 .bx {
   font-size: 2.5rem;
@@ -86,16 +88,17 @@ body {
   top: 1120px;
 }
 
-.pla{
+.pla {
   width: 200%;
 }
 
-.resp{
+.resp {
   width: 450px;
   position: absolute;
   top: 1189px;
   left: 1124px;
 }
+
 /* ================= HEADER ================ */
 header {
   display: flex;
@@ -225,7 +228,7 @@ header {
 
 .offer img {
   background-color: transparent;
-  width:60%;
+  width: 60%;
 }
 
 .offer-1 {
@@ -423,6 +426,8 @@ header {
   animation: icon3d 250ms infinite;
 }
 
+/*Animaciones*/
+
 @keyframes icon3d {
   0% {
     text-shadow: 5px 4px var(--redColor), -5px -6px var(--blueColor);
@@ -444,32 +449,71 @@ header {
     text-shadow: -5px 0 var(--redColor), 5px -4px var(--blueColor);
   }
 }
-/* Whatsapp */
 
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+
+@keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
-.my-float{
-	margin-top:16px;
+@keyframes blur-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 1
+  }
+}
+
+/* Nuevo wsp */
+
+.wt {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: inline;
+  text-align: end;
+}
+
+.wt-icon img {
+  height: 50px;
+  width: 50px;
+}
+
+.popup {
+  position: relative;
+  background-color: #fff;
+  color: #2eb242;
+  padding: 5px 15px 5px 15px;
+  border-radius: 40px;
+  right: 60px;
+  top: 40px;
+  bottom: -15px;
+  opacity: 0;
+}
+
+
+
+.wt:hover .popup {
+  display: block;
+  bottom: 0px;
+  opacity: 1;
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-left both;
 }
 
 
 /* Responsive */
 
 
- @media (max-width: 767px) {
+@media (max-width: 767px) {
   header {
     padding: 10px;
   }
@@ -477,24 +521,28 @@ header {
   main {
     padding: 10px;
   }
-  .cont1{
+
+  .cont1 {
     position: absolute;
     top: 272px;
     left: 84px;
     width: 403px;
   }
-  .mant{
+
+  .mant {
     width: 50%;
     position: absolute;
     left: 150px;
     top: 1430px;
   }
-  .resp{
+
+  .resp {
     width: 70%;
     position: absolute;
     top: 1430px;
     left: 70px;
   }
+
   .section-1 {
     width: auto;
     height: auto;
@@ -586,7 +634,7 @@ header {
     padding-bottom: 1rem;
   }
 
-} 
+}
 
 /* Media query para pantallas entre 768px y 991px */
 

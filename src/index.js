@@ -5,12 +5,11 @@ import Navbar from './Components/Navbar';
 import Comp1 from './Components/Componente1';
 import Comp2 from './Components/Componente2';
 import { Footer } from './Components/Footer';
-import Wsp from './Components/WhatsappPNG';
 import Copyri from './Components/Copyri';
+import Greeting from './Components/WhatsappPNG';
 //-------------StyleSheet-------------//
 import "./style.css";
 import "./Botons.css";
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +19,10 @@ root.render(
     <Comp2/>
     <Footer/>
     <Copyri/>
-    <Wsp/>
+    <Greeting/>
   </>
+
 );
+
+
+

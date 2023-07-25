@@ -1,18 +1,17 @@
-// server.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Configuración de la conexión a la base de datos MySQL
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'tu_usuario_mysql',
-  password: 'tu_contraseña_mysql',
-  database: 'nombre_de_la_base_de_datos',
+  host: 'localhost', // Cambiar a la dirección de tu servidor MySQL si no está en local
+  user: 'root',
+  password: '',
+  database: 'longdino',
 });
 
 connection.connect((err) => {
@@ -41,7 +40,7 @@ app.post('/api/contact', (req, res) => {
   }
 
   // Insertar los datos en la base de datos
-  const sql = 'INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)';
+  const sql = 'INSERT INTO formulario (name, email, subject, message) VALUES (?, ?, ?, ?)';
   connection.query(sql, [name, email, subject, message], (err, result) => {
     if (err) {
       console.error('Error al guardar el formulario en MySQL:', err);
