@@ -7,7 +7,7 @@ function Navbar(){
         <header>
             <div className="company-logo" >
                 
-                LongDino
+                LONGDINO
             </div>
             <nav className="navbar">
             <ul className="nav-items">
