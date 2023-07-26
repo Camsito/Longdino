@@ -112,18 +112,20 @@ function Formulario() {
           </div>
           <div className="work">
             <h2>Asunto</h2>
-            <textarea
+            <input
               type="text"
               maxLength="300"
+              required
               value={asunto}
               onChange={(e) => setAsunto(e.target.value)}
-            ></textarea>
+            ></input>
           </div>
           <div className="descripcion">
             <h2>Mensaje: </h2>
             <textarea
               type="text"
               maxLength="300"
+              
               placeholder="Cuentanos de que se trata..."
               value={mensaje}
               onChange={(e) => setMensaje(e.target.value)}

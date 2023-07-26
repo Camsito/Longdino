@@ -6,7 +6,6 @@ import { Gabinete } from '../assets/Gabinete';
 import {Manten} from '../assets/Manten';
 //--------  Funciones --------//
 import React, { useEffect } from 'react';
-import '../style.css'; // Asegúrate de reemplazar con la ruta correcta a tu archivo CSS
 
 const ScrollImageComponent = () => {
     useEffect(() => {

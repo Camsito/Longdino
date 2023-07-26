@@ -5,7 +5,10 @@ function Navbar() {
   return (
     <>
       <header>
-        <div className="company-logo">LONGDINO</div>
+        <div className="company-logo">
+          <Link to="/">
+            LONGDINO
+          </Link></div>
         <nav className="navbar">
           <ul className="nav-items">
             <li className="nav-item">
@@ -24,8 +27,8 @@ function Navbar() {
           <i className="bx bx-menu"></i>
           <i className="bx bx-x"></i>
         </div>
-      </header>
       <div className="linetop"></div>
+      </header>
     </>
   );
 }

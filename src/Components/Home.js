@@ -11,13 +11,13 @@ import '../Botons.css';
 
 function Home () {
   return (
-    <>
+    <body className="bodyclas">
       <Comp1/>
       <Comp2/>
       <Footer/>
       <Copyri/>
       <Greeting/>
-    </>
+    </body>
   );
 };
 

@@ -55,8 +55,8 @@ img {
 }
 
 /* -- BODY -- */
-body {
-  font-family: "Raleway", sans-serif;
+.bodyclas {
+  /* font-family: "Raleway", sans-serif; */
   font-size: 1rem;
   background-color: #000;
 }
@@ -111,6 +111,11 @@ header {
   background-color: var(--dark-color);
   padding: 1rem 2rem;
   animation: blur-in 0.8s linear both;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .company-logo {
