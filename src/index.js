@@ -9,10 +9,10 @@ import ContactForm from "../src/Components/Contact";
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/contact" Component={ContactForm} />
+        <Route path="/" Component={Home}/>
+        <Route path="/contact" Component={ContactForm}/>
       </Routes>
     </Router>
   );
