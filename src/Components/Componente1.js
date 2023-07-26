@@ -11,7 +11,7 @@ function Comp1(){
                         Somos una Pyme dedicada al armado de Pc y soporte tecnico en distintas areas, ademas hacemos instalaciones de cableado de red, no dudes en contactarnos por tus consultas.
                     </h2>
                 </div>
-                        <img className="cont1" src={Logo} alt=""/>
+                        <img className="cont1 log" src={Logo} alt=""/>
                     {/* Agregar imagen del slogan al terminar el diseño*/}
                 
             </section>

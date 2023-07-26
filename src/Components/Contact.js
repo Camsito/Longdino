@@ -9,9 +9,35 @@ function Formulario() {
   const [mail, setMail] = useState('');
   const [asunto, setAsunto] = useState('');
   const [mensaje, setMensaje] = useState('');
+  const [telError, setTelError] = useState('');
+  const [mailError, setMailError] = useState('');
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{9}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!validatePhone(tel)) {
+      setTelError('El teléfono debe ser un número de 9 dígitos.');
+      return;
+    }
+
+    if (!validateEmail(mail)) {
+      setMailError('El correo electrónico no es válido.');
+      return;
+    }
+
+    setTelError('');
+    setMailError('');
 
     const formData = {
       nombre,
@@ -22,22 +48,26 @@ function Formulario() {
       mensaje,
     };
 
-    axios.post('http://localhost:3001/api/formulario', formData)
+    axios
+      .post('http://192.168.1.114:3001/api/formulario', formData)
       .then((response) => {
         console.log(response.data);
-        // Aquí podrías mostrar un mensaje de éxito al usuario o redirigirlo a otra página
+        // Clear the form after successful submission
+        setNombre('');
+        setApellido('');
+        setTel('');
+        setMail('');
+        setAsunto('');
+        setMensaje('');
+        setSubmissionStatus(true); // Form successfully submitted
       })
       .catch((error) => {
         console.error('Error al enviar datos:', error);
-        // Aquí podrías mostrar un mensaje de error al usuario
+        setSubmissionStatus(false); // Form submission failed
       });
   };
-  
-
-  
 
   return (
-    
     <div className="contact-container">
       <div className="contenido">
         <div>
@@ -69,6 +99,8 @@ function Formulario() {
               value={tel}
               onChange={(e) => setTel(e.target.value)}
             />
+            {telError && <div className="error-message">{telError}</div>}
+
             <label htmlFor="mail">Mail: </label>
             <input
               type="email"
@@ -76,6 +108,7 @@ function Formulario() {
               value={mail}
               onChange={(e) => setMail(e.target.value)}
             />
+            {mailError && <div className="error-message">{mailError}</div>}
           </div>
           <div className="work">
             <h2>Asunto</h2>
@@ -100,6 +133,12 @@ function Formulario() {
             <button type="submit">Enviar</button>
           </div>
         </form>
+        {submissionStatus === true && (
+          <div className="success-message">Formulario enviado exitosamente.</div>
+        )}
+        {submissionStatus === false && (
+          <div className="error-message">Error al enviar el formulario.</div>
+        )}
       </div>
     </div>
   );

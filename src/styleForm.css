@@ -136,3 +136,14 @@ https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
 	border-radius: 50%;
 	background: white;
 }
+
+/* Mensajes de error */
+
+.success-message{
+    text-align: center;
+    color:aquamarine;
+}
+.error-message{
+    text-align: center;
+    color:#f75555;
+}
