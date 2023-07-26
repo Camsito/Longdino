@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "../src/Components/Navbar";
 import Home from "../src/Components/Home";
-import Contact from "../src/Components/Contact";
+import ContactForm from "../src/Components/Contact";
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" Component={Home} />
-        <Route path="/contact" Component={Contact} />
+        <Route path="/contact" Component={ContactForm} />
       </Routes>
     </Router>
   );
@@ -20,3 +20,6 @@ const App = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
+
+
+
