@@ -38,43 +38,43 @@ app.post('/api/formulario', (req, res) => {
       console.log('Datos insertados correctamente.');
       res.status(200).send('Datos insertados correctamente.');
 
-      sendEmail(mail, nombre, apellido, tel, asunto, mensaje)
-        .then(() => {
-          console.log('Email sent successfully');
-        })
-        .catch((error) => {
-          console.error('Error sending email:', error);
-        });
+      // sendEmail(mail, nombre, apellido, tel, asunto, mensaje)
+      //   .then(() => {
+      //     console.log('Email sent successfully');
+      //   })
+      //   .catch((error) => {
+      //     console.error('Error sending email:', error);
+      //   });
     }
   });
 });
 
-async function sendEmail(receiver, nombre, apellido, tel, asunto, mensaje) {
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-      user: 'longdino.oficial@gmail.com',
-      pass: 'Colita12.',
-    },
-  });
+// async function sendEmail(receiver, nombre, apellido, tel, asunto, mensaje) {
+//   const transporter = nodemailer.createTransport({
+//     service: 'Gmail',
+//     auth: {
+//       user: 'longdino.oficial@gmail.com',
+//       pass: 'Colita12.',
+//     },
+//   });
 
-  const mailOptions = {
-    from: 'longdino.oficial@gmail.com',
-    to: receiver,
-    subject: 'Form Submission Confirmation',
-    html: `
-      <h1>Form Submission Details:</h1>
-      <p>Nombre: ${nombre}</p>
-      <p>Apellido: ${apellido}</p>
-      <p>Teléfono: ${tel}</p>
-      <p>Mail: ${receiver}</p>
-      <p>Asunto: ${asunto}</p>
-      <p>Mensaje: ${mensaje}</p>
-    `,
-  };
+//   const mailOptions = {
+//     from: 'longdino.oficial@gmail.com',
+//     to: receiver,
+//     subject: 'Form Submission Confirmation',
+//     html: `
+//       <h1>Form Submission Details:</h1>
+//       <p>Nombre: ${nombre}</p>
+//       <p>Apellido: ${apellido}</p>
+//       <p>Teléfono: ${tel}</p>
+//       <p>Mail: ${receiver}</p>
+//       <p>Asunto: ${asunto}</p>
+//       <p>Mensaje: ${mensaje}</p>
+//     `,
+//   };
 
-  return transporter.sendMail(mailOptions);
-}
+//   return transporter.sendMail(mailOptions);
+// }
 
 app.listen(port, '192.168.1.114', () => {
   console.log(`Servidor Node.js escuchando en http://192.168.1.114:${port}`);
