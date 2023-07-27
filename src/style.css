@@ -192,6 +192,16 @@ header {
 }
 
 /* .home-computer-container {} */
+.slogan{
+  width: 182%;
+  height: 43%;
+}
+.slogan img{
+  position: absolute;
+  top: -6%;
+  left: 58%;
+}
+
 
 .slogan .company-title {
   background: -webkit-linear-gradient(120deg,
