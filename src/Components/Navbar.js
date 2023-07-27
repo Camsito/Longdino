@@ -13,12 +13,17 @@ function Navbar() {
           <ul className="nav-items">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                HOME
+                INICIO
               </Link>
             </li>
+            {/* <li className="nav-item">
+              <Link to="/AboutUs" className="nav-link">
+                SOBRE NOSOTROS
+              </Link>
+            </li> */}
             <li className="nav-item">
               <Link to="/contact" className="nav-link">
-                CONTACT
+                CONTACTANOS
               </Link>
             </li>
           </ul>

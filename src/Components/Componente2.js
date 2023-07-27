@@ -43,13 +43,13 @@ const ScrollImageComponent = () => {
                 </div>
                 {/* Oferta 2 */}
                 <div class="offer2 offer-2">
-                    <img src={Manten}  alt="a opened computer" className="offer-img offer-2-img resp fade-in-image"/>
+                    <img src={Manten}  alt="a opened computer" class="offer-img offer-2-img resp fade-in-image"/>
                     <div class="offer-description offer-desc-2">
-                    <h2 class="offer-title">Mantenciones</h2>
-                        <p class="offer-hook">Tambien realizamos mantenciones tanto de Notebook´s como de Pc´s escritorio.</p>
+                        <h2 class="offer-title">Servicio Tecnico</h2>
+                        <p class="offer-hook">Tambien contamos con servicio tecnico de Notebook´s</p>
                         <button class="custom-btn btn-12"><span><a href="https://api.whatsapp.com/send?phone=+56936681029&text=Hola, Quisiera hacer unas consultas."  target="_blank" rel="noreferrer" style={{color:"#fff"}}>Haz tu consulta!</a></span><span>Hablanos</span></button>
                     </div>
-                </div> 
+                </div>
                 {/* Oferta 3 */}
                 <div class="offer offer-1">
                     <img src={Gabinete}  alt="a computer in dark with with white shadow" className="offer-img offer-1-img fade-in-image"/>
@@ -61,7 +61,7 @@ const ScrollImageComponent = () => {
                 </div>
                 {/* Oferta 4 */}
                 <div class="offer2 offer-2">
-                    <img src={ServicioTec} style={{width: "40%"}} alt="a opened computer" class="offer-img offer-2-img fade-in-image"/>
+                    <img src={ServicioTec}  alt="a opened computer" class="offer-img offer-2-img resp2 fade-in-image"/>
                     <div class="offer-description offer-desc-2">
                         <h2 class="offer-title">Servicio Tecnico</h2>
                         <p class="offer-hook">Tambien contamos con servicio tecnico de Notebook´s</p>
