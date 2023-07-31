@@ -14,12 +14,12 @@ const App = () => {
         <Route path="/" Component={Home}/>
         <Route path="/contact" Component={ContactForm}/>
       </Routes>
+    <Navbar/>
     </Router>
   );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
-
 
 
