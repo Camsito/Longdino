@@ -13,26 +13,22 @@ function Navbar() {
           <ul className="nav-items">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                INICIO
+                Inicio
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link to="/AboutUs" className="nav-link">
-                SOBRE NOSOTROS
+             <li className="nav-item">
+              <Link to="/Presets" className="nav-link">
+                Catalogo
               </Link>
-            </li> */}
+            </li> 
             <li className="nav-item">
               <Link to="/contact" className="nav-link">
-                CONTACTANOS
+                Contactanos
               </Link>
             </li>
           </ul>
         </nav>
-        <div className="menu-toggle">
-          <i className="bx bx-menu"></i>
-          <i className="bx bx-x"></i>
-        </div>
-      <div className="linetop"></div>
+        <div className="linetop"></div>
       </header>
     </>
   );

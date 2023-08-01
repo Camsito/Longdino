@@ -93,10 +93,6 @@ img {
   width: 200%;
 }
 
-.resp {
-
-}
-
 .resp2 {
   width: 380px;
   position: absolute;
@@ -115,13 +111,14 @@ header {
   justify-content: space-between;
   background-color: var(--dark-color);
   padding: 1rem 2rem;
-  animation: blur-in 0.8s linear both;
   z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
+
+
 
 .company-logo {
   font-size: 2.5rem;
@@ -256,7 +253,7 @@ header {
 
 .offer img {
   background-color: transparent;
-  width: 60%;
+  width: 80%;
 }
 
 .offer-1 {
@@ -269,6 +266,8 @@ header {
 
 .offer-2 {
   grid-template-areas: "offer-desc-2 offer-2-img";
+  justify-content: space-between;
+  margin-Left: 100px;
 }
 
 .offer-2 img {
@@ -552,19 +551,15 @@ header {
 
 /* Media query para pantallas entre 767 */
 @media (max-width: 767px) {
-  .linetop,
-  .line {
-    top: 50px; /* Ajustar la posición vertical en dispositivos más pequeños */
-  }
+
 
   .linetop {
     height: 0.5px; /* Ajustar el grosor de la línea */
-    top: 50px; /* Ajustar la posición vertical en dispositivos más pequeños */
+    top: 53px; /* Ajustar la posición vertical en dispositivos más pequeños */
   }
 
   .line {
-    height: 0.5px; /* Ajustar el grosor de la línea */
-    margin-top: 10px; /* Ajustar el margen superior */
+    height: 0.98px;
   }
 
   .slogan {
@@ -580,9 +575,10 @@ header {
     width: 95%;
   }
   
-
   header {
-    padding: 10px;
+    flex-direction: column; /* Cambiar a dirección vertical */
+    padding: 1rem; /* Reducir el padding para un mejor ajuste en dispositivos pequeños */
+    backdrop-filter: blur(90rem);
   }
 
   main {
@@ -603,18 +599,7 @@ header {
     top: 1430px;
   }
 
-  .resp {
-    width: 70%;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .resp2 {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
+
   .section-1 {
     width: auto;
     height: auto;
@@ -655,12 +640,10 @@ header {
     margin: 2rem 0;
   }
 
-  .offer2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0;
+  .offer-2 {
+    grid-template-areas: "offer-desc-2 offer-2-img";
+    justify-content: space-between;
+    margin-Left: "100px";
   }
 
   .offer img {
@@ -712,15 +695,20 @@ header {
 /* Ajuste para dispositivos hasta 480px */
 @media (max-width: 480px) {
   /* Resto de los estilos previos a 767px */
-
- 
-
-  .linetop {
-    height: 0.3px; /* Ajustar el grosor de la línea */
-    top: 50px; /* Ajustar la posición vertical en dispositivos aún más pequeños */
+  .linetop,
+  .line {
+    top: 50px; /* Ajustar la posición vertical en dispositivos más pequeños */
   }
 
+  .linetop {
+    height: 0.5px; /* Ajustar el grosor de la línea */
+    top: 53px; /* Ajustar la posición vertical en dispositivos más pequeños */
+  }
 
+  .line {
+    height: 1.5px; /* Ajustar el grosor de la línea */
+    margin-top: 0px; /* Ajustar el margen superior */
+  }
 
   .slogan {
     width: 100%;
@@ -735,9 +723,9 @@ header {
   /* Resto de los estilos previos a 767px */
 
   header {
-    padding: 5px; /* Reducir el padding en dispositivos aún más pequeños */
+    flex-direction: column; /* Cambiar a dirección vertical */
+    padding: 1rem; /* Reducir el padding para un mejor ajuste en dispositivos pequeños */
   }
-
   main {
     padding: 5px; /* Reducir el padding en dispositivos aún más pequeños */
   }
@@ -747,25 +735,6 @@ header {
     left: 20px; /* Ajustar la posición horizontal en dispositivos aún más pequeños */
     width: 100%; /* Ajustar el ancho al 100% en dispositivos aún más pequeños */
     max-width: 400px; /* Limitar el ancho máximo para que no se desborde en pantallas pequeñas */
-  }
-
-  .mant {
-    width: 80%; /* Ajustar el ancho al 80% en dispositivos aún más pequeños */
-    left: 10px; /* Ajustar la posición horizontal en dispositivos aún más pequeños */
-    top: 1100px; /* Ajustar la posición vertical en dispositivos aún más pequeños */
-    max-width: 400px; /* Limitar el ancho máximo para que no se desborde en pantallas pequeñas */
-  }
-
-  .resp {
-    width: 100%; /* Ajustar el ancho al 100% en dispositivos aún más pequeños */
-    top: 0;
-    left: 0;
-  }
-  
-  .resp2 {
-    width: 100%; /* Ajustar el ancho al 100% en dispositivos aún más pequeños */
-    top: 0;
-    left: 0;
   }
 
   .section-1 {
@@ -788,6 +757,7 @@ header {
 
   /* Resto de los estilos previos a 767px */
 
+  
   .offer img {
     max-width: 100%; /* Ajustar el tamaño de la imagen al 100% en dispositivos aún más pequeños */
   }

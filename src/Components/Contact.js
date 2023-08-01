@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+// Componentes //
+import {Footer} from '../Components/Footer';
+import Line from './Copyri';
+//Estilos//
 import '../styleForm.css';
 
 function Formulario() {
@@ -68,6 +72,7 @@ function Formulario() {
   };
 
   return (
+    <div>
     <div className="contact-container">
       <div className="contenido">
         <div>
@@ -142,6 +147,9 @@ function Formulario() {
           <div className="error-message">Error al enviar el formulario.</div>
         )}
       </div>
+    </div>
+    <Footer/>
+    <Line/>
     </div>
   );
 }

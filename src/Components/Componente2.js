@@ -32,35 +32,16 @@ const ScrollImageComponent = () => {
       <section class="containear section-2">
         {/* oferta 1 */}
         <div class="offer offer-1">
-          <img
-            src={Placa}
-            style={{ width: "100%" }}
-            alt="a computer in dark with with white shadow"
-            class="offer-img offer-1-img fade-in-image"
-          />
+          <img src={Placa} style={{ width: "100%" }} alt="a computer in dark with with white shadow" class="offer-img offer-1-img fade-in-image"/>
           <div class="offer-description offer-desc-1">
             <h2 class="offer-title">Armado de Pc</h2>
-            <p class="offer-hook">
-              Contactanos para cotizar el armado o partes de tu Pc
-            </p>
-            <button class="custom-btn btn-12">
-              <span>
-                <a
-                  href="https://api.whatsapp.com/send?phone=+56936681029&text=Hola, Quisiera solicitar un presupuesto."
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#fff" }}
-                >
-                  Tu presupuesto
-                </a>
-              </span>
-              <span>Solicita aqui</span>
-            </button>
+            <p class="offer-hook">Contactanos para cotizar el armado o partes de tu Pc</p>
+            <button class="custom-btn btn-12"><span><a href="https://api.whatsapp.com/send?phone=+56936681029&text=Hola, Quisiera solicitar un presupuesto." target="_blank" rel="noreferrer" style={{ color: "#fff" }}>Tu presupuesto</a></span><span>Solicita aqui</span></button>
           </div>
         </div>
         {/* Oferta 2 */}
-        <div class="offer offer-2" style={{ marginLeft: "100px" }}>
-          <img src={Manten} style={{ width: "80px" }}  alt="a opened computer"  class="offer-img offer-2-img fade-in-image"/>
+        <div class="offer-2 offer">
+          <img src={Manten}  alt="a opened computer"  class="offer-img offer-2-img fade-in-image"/>
           <div class="offer-description offer-desc-2">
             <h2 class="offer-title">Mantencion</h2>
             <p class="offer-hook">Contactanos para cotizar tu mantencion</p>
@@ -70,7 +51,7 @@ const ScrollImageComponent = () => {
           </div>
         </div>
         {/* Oferta 3 */}
-        <div class="offer offer-1">
+        <div class="offer offer-1" style={{marginBottom:"0px"}}>
           <img  src={Gabinete}  alt="a computer in dark with with white shadow"  className="offer-img offer-1-img fade-in-image"/>
           <div class="offer-description offer-desc-1">
             <h2 class="offer-title">Servicio Tecnico</h2>

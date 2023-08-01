@@ -2,7 +2,6 @@ import React from "react";
 function Line() {
   return (
     <footer>
-      <div className="line"></div>
       <div class="container end-footer">
         <div class="copyright">
           copyright © 2023 - Present • <b>LONGDINO</b>
