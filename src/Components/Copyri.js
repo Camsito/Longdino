@@ -4,7 +4,7 @@ function Line() {
     <footer>
       <div class="container end-footer">
         <div class="copyright">
-          copyright © 2023 - Present • <b>LONGDINO</b>
+          Copyright © 2023 - Present • <b>LONGDINO</b>
         </div>
         <a class="Cam" href="https://www.instagram.com/camssitto/">
           Cam Design
