@@ -1,4 +1,4 @@
-import "../Stile.css";
+
 import { Link } from "react-router-dom";
 export function Footer() {
   /* eslint-disable */
