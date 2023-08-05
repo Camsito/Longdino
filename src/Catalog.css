@@ -4,6 +4,15 @@
 *::after {
   box-sizing: border-box;
 }
+
+.shopline {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to left, transparent, #123142, #3b657a, #123142, transparent);
+  position: relative;
+  top: -5%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -52,6 +61,7 @@ body {
   flex: 1;
   margin-bottom: 15px;
   font-weight: 300;
+  line-height: 133.5%;
 }
 .card__bottom {
   display: flex;
