@@ -3,6 +3,7 @@ import axios from 'axios';
 // Componentes //
 import {Footer} from '../Components/Footer';
 import Line from './Copyri';
+import Greeting from './WhatsappPNG';
 //Estilos//
 import '../styleForm.css';
 
@@ -150,6 +151,7 @@ function Formulario() {
     </div>
     <Footer/>
     <Line/>
+    <Greeting/>
     </div>
   );
 }
