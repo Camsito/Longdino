@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "../src/Components/Navbar";
+// Componentes
+import Navbar from "../src/Components/General/Navbar";
 import Home from "../src/Components/Home";
 import Presets from "../src/Components/Presets";
 import ContactForm from "../src/Components/Contact";
+import { Footer } from "./Components/General/Footer";
+import Line from "./Components/General/Copyri";
+import Greeting from "./Components/General/WhatsappPNG";
 
 
 
@@ -17,6 +21,9 @@ const App = () => {
         <Route path="/Presets" Component={Presets}/>
         <Route path="/contact" Component={ContactForm}/>
       </Routes>
+      <Footer />
+      <Line />
+      <Greeting />
     </Router>
   );
 };
