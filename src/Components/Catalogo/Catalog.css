@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   background: #000;
+  border: 1px solid;
 }
 .card__image {
   height: 200px;
@@ -113,14 +114,20 @@ body {
 
 /* Filtro */
 
+.select{
+  background-color: transparent;
+}
 .option-all{
-  background-color: #660860;
+  background-color: #3b657a;
+  border: none;
 }
 .option-amd{
-  background-color: #2e012b;
+  background-color:#ED1C24 ;
+  border: none;
 }
 .option-intel{
-  background-color: #3b657a;
+  background-color: #0071C5;
+  border: none;
 }
 @media (max-width: 991.98px) {
   .containers {
@@ -135,5 +142,8 @@ body {
     width: 100%;
   }
 }
+
+
+
 
 
