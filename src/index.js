@@ -9,6 +9,7 @@ import ContactForm from "../src/Components/Contact";
 import { Footer } from "./Components/General/Footer";
 import Line from "./Components/General/Copyri";
 import Greeting from "./Components/General/WhatsappPNG";
+import AboutUs from './Components/AboutUs/AboutUs'
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" Component={Home}/>
         <Route path="/Presets" Component={Presets}/>
         <Route path="/contact" Component={ContactForm}/>
+        <Route path="/AboutUs" Component={AboutUs}/>
       </Routes>
       <Footer />
       <Line />

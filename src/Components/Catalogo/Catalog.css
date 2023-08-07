@@ -110,6 +110,18 @@ body {
   width: 33.33333333%;
   padding: 0 15px 30px;
 }
+
+/* Filtro */
+
+.option-all{
+  background-color: #660860;
+}
+.option-amd{
+  background-color: #2e012b;
+}
+.option-intel{
+  background-color: #3b657a;
+}
 @media (max-width: 991.98px) {
   .containers {
     padding: 0 15px;
@@ -123,3 +135,5 @@ body {
     width: 100%;
   }
 }
+
+
