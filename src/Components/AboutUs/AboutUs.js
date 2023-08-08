@@ -1,4 +1,4 @@
-import "../../AboutUs.css";
+import "../AboutUs/AboutUs.css";
 import Logo from'../../assets/LogoNegro.svg'
 function AboutUs() {
     /* eslint-disable */

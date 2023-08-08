@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.32b6ce82.css",
+    "main.js": "/static/js/main.7dc7b151.js",
+    "static/media/Pc2-R5-5500-Gigabyte-A520M-DS3H-AM4.png": "/static/media/Pc2-R5-5500-Gigabyte-A520M-DS3H-AM4.5ef9c32cdc56dc966fa6.png",
+    "static/media/Pc3-R5-5500-AsusPrime-A520MA-ll-AM4.png": "/static/media/Pc3-R5-5500-AsusPrime-A520MA-ll-AM4.4bc029091d2b43170715.png",
+    "static/media/Pc4-R3-4350-MSI-A320M-A-PRO-MAX-AM4.png": "/static/media/Pc4-R3-4350-MSI-A320M-A-PRO-MAX-AM4.f504fe857599ed6234fb.png",
+    "static/media/Pc1-i5-10400F-Prime-H510M-E-LGA1200.png": "/static/media/Pc1-i5-10400F-Prime-H510M-E-LGA1200.fc8446bf42462966647a.png",
+    "static/media/Pc6-I7-10700-ASUS-PRIME-H510M-E-LGA1200.png": "/static/media/Pc6-I7-10700-ASUS-PRIME-H510M-E-LGA1200.d1d4c1ace7b4a699f84e.png",
+    "static/media/Pc5-I5-10400-ASUS-PRIME-H510M-E-LGA1200.png": "/static/media/Pc5-I5-10400-ASUS-PRIME-H510M-E-LGA1200.f7f7f41058a0519921b6.png",
+    "static/media/Placa.png": "/static/media/Placa.579fbd7de72d4b062267.png",
+    "static/media/Logo.svg": "/static/media/Logo.b7a0a9749a9b3db20a9b1c2b5f073d8e.svg",
+    "static/media/LogoNegro.svg": "/static/media/LogoNegro.9f469bab6849494db80b30ff74c3df8a.svg",
+    "static/media/Manten.png": "/static/media/Manten.2f123582927877862d18.png",
+    "static/media/Gabinete.png": "/static/media/Gabinete.f810915f258313044af1.png",
+    "index.html": "/index.html",
+    "main.32b6ce82.css.map": "/static/css/main.32b6ce82.css.map",
+    "main.7dc7b151.js.map": "/static/js/main.7dc7b151.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32b6ce82.css",
+    "static/js/main.7dc7b151.js"
+  ]
+}
