@@ -14,12 +14,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4  # Obtiene el código del repositorio
 
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Instalar dependencias
         run: npm install  # Instala dependencias desde package.json
 
       # Intenta ejecutar react-scripts desde la ruta correcta
       - name: Compilar la aplicación
-        run: sudo npm run build
+        run: node node_modules/react-scripts/scripts/build.js
 
       - uses: FirebaseExtended/action-hosting-deploy@v0  # Desplegar en Firebase
         with:
