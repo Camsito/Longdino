@@ -14,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4  # Obtiene el código del repositorio
 
-      # **NUEVO PASO PARA INSTALAR DEPENDENCIAS**
       - name: Instalar dependencias
         run: npm install  # Instala dependencias desde package.json
 
+      # Intenta ejecutar react-scripts desde la ruta correcta
       - name: Compilar la aplicación
         run: ./node_modules/.bin/react-scripts build
 
