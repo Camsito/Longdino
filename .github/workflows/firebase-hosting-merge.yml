@@ -19,7 +19,7 @@ jobs:
         run: npm install  # Instala dependencias desde package.json
 
       - name: Compilar la aplicación
-        run: npm run build
+        run: ./node_modules/.bin/react-scripts build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0  # Desplegar en Firebase
         with:
